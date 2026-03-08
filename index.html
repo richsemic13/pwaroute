@@ -23,6 +23,7 @@
 <h1>Iloilo Travel Route</h1>
 
 <select id="routeSelect">
+<option value="">Select Route</option>
 <option>Iloilo City - Oton</option>
 <option>Iloilo City - Pavia</option>
 <option>Iloilo City - Jaro</option>
@@ -37,35 +38,6 @@
 
 </div>
 
-<div class="route-list">
-
-<label class="route">
-<span>Iloilo City - Oton</span>
-<input type="radio" name="route">
-</label>
-
-<label class="route">
-<span>Iloilo City - Pavia</span>
-<input type="radio" name="route">
-</label>
-
-<label class="route">
-<span>Iloilo City - Jaro</span>
-<input type="radio" name="route">
-</label>
-
-<label class="route">
-<span>Iloilo City - Miagao</span>
-<input type="radio" name="route">
-</label>
-
-<label class="route">
-<span>Iloilo City - Concepcion</span>
-<input type="radio" name="route">
-</label>
-
-</div>
-
 <div id="savedRoutes"></div>
 
 </div>
@@ -73,11 +45,9 @@
 <script src="script.js"></script>
 
 <script>
-
 if ('serviceWorker' in navigator) {
 navigator.serviceWorker.register('service-worker.js')
 }
-
 </script>
 
 </body>
