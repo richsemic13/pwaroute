@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Iloilo Travel Route</title>
+
 <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#1e63d5">
+
 </head>
 
 <body>
 
-<div class="container">
+<div class="app">
+
+<div class="header">
 
 <h1>Iloilo Travel Route</h1>
 
@@ -21,8 +31,39 @@
 </select>
 
 <div class="buttons">
-<button onclick="saveRoute()">Save Route</button>
-<button onclick="showRoutes()">Show Routes</button>
+<button class="save" onclick="saveRoute()">Save Route</button>
+<button class="show" onclick="showRoutes()">Show Routes</button>
+</div>
+
+</div>
+
+<div class="route-list">
+
+<label class="route">
+<span>Iloilo City - Oton</span>
+<input type="radio" name="route">
+</label>
+
+<label class="route">
+<span>Iloilo City - Pavia</span>
+<input type="radio" name="route">
+</label>
+
+<label class="route">
+<span>Iloilo City - Jaro</span>
+<input type="radio" name="route">
+</label>
+
+<label class="route">
+<span>Iloilo City - Miagao</span>
+<input type="radio" name="route">
+</label>
+
+<label class="route">
+<span>Iloilo City - Concepcion</span>
+<input type="radio" name="route">
+</label>
+
 </div>
 
 <div id="savedRoutes"></div>
@@ -30,6 +71,14 @@
 </div>
 
 <script src="script.js"></script>
+
+<script>
+
+if ('serviceWorker' in navigator) {
+navigator.serviceWorker.register('service-worker.js')
+}
+
+</script>
 
 </body>
 </html>
