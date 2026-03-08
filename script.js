@@ -2,6 +2,11 @@ function saveRoute(){
 
 let route = document.getElementById("routeSelect").value
 
+if(route === ""){
+alert("Please select a route first")
+return
+}
+
 let routes = JSON.parse(localStorage.getItem("routes")) || []
 
 routes.push(route)
